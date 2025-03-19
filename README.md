@@ -103,5 +103,71 @@ Demonstrates standalone pipe IPC.
 
 ## Directory Structure
 
+# IPC Debugger - Project Structure
 
-ipc-debugger/ │ ├── src/ # Source code │ ├── core/ # Core functionality │ │ ├── init.py │ │ ├── process_manager.py # Process creation and management │ │ ├── ipc/ # IPC mechanisms │ │ │ ├── init.py │ │ │ ├── base.py # Abstract IPC base class │ │ │ ├── pipes.py # Pipe IPC implementation │ │ │ ├── message_queues.py # Message queue placeholder │ │ │ ├── shared_memory.py # Shared memory placeholder │ │ │ └── sync_primitives.py # Synchronization primitives (basic) │ │ └── data_tracker.py # Data flow tracking (basic) │ │ │ ├── analysis/ # Analysis tools │ │ ├── init.py │ │ ├── deadlock_detector.py # Deadlock detection placeholder │ │ ├── bottleneck_analyzer.py # Bottleneck analysis placeholder │ │ ├── performance_metrics.py # Basic performance metrics │ │ └── event_logger.py # SQLite event logging │ │ │ └── gui/ # GUI components │ ├── init.py │ ├── main_window.py # Main GUI window │ ├── process_view.py # Process visualization placeholder │ ├── data_flow_view.py # Data flow animation placeholder │ ├── metrics_view.py # Metrics display placeholder │ ├── config_panel.py # Configuration placeholder │ └── resources/ # Empty directory for GUI resources │ ├── tests/ # Unit tests │ ├── core/ │ │ ├── test_process_manager.py │ │ └── test_ipc/ │ │ ├── test_pipes.py │ │ ├── test_message_queues.py │ │ └── test_shared_memory.py │ ├── analysis/ │ │ ├── test_deadlock_detector.py │ │ └── test_performance_metrics.py │ └── gui/ │ └── test_process_view.py │ ├── examples/ # Example scripts │ ├── simple_pipe_example.py │ ├── message_queue_demo.py │ └── deadlock_scenario.py │ ├── docs/ # Documentation │ ├── user_manual.md │ ├── api_reference.md │ └── developer_guide.md │ ├── scripts/ # Utility scripts │ ├── setup.sh # Install dependencies │ └── run_tests.sh # Run tests │ ├── README.md # This file ├── requirements.txt # Python dependencies ├── setup.py # Setup script └── main.py # Entry point
+ipc-debugger/
+│# IPC Debugger - Project Structure
+
+```plaintext
+ipc-debugger/
+│
+├── src/                    # Source code
+│   ├── core/              # Core functionality
+│   │   ├── __init__.py
+│   │   ├── process_manager.py      # Process creation and management
+│   │   ├── ipc/                   # IPC mechanisms
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py            # Abstract IPC base class
+│   │   │   ├── pipes.py           # Pipe IPC implementation
+│   │   │   ├── message_queues.py  # Message queue placeholder
+│   │   │   ├── shared_memory.py   # Shared memory placeholder
+│   │   │   └── sync_primitives.py # Synchronization primitives (basic)
+│   │   └── data_tracker.py        # Data flow tracking (basic)
+│   │
+│   ├── analysis/          # Analysis tools
+│   │   ├── __init__.py
+│   │   ├── deadlock_detector.py    # Deadlock detection placeholder
+│   │   ├── bottleneck_analyzer.py  # Bottleneck analysis placeholder
+│   │   ├── performance_metrics.py  # Basic performance metrics
+│   │   └── event_logger.py         # SQLite event logging
+│   │
+│   └── gui/               # GUI components
+│       ├── __init__.py
+│       ├── main_window.py          # Main GUI window
+│       ├── process_view.py         # Process visualization placeholder
+│       ├── data_flow_view.py       # Data flow animation placeholder
+│       ├── metrics_view.py         # Metrics display placeholder
+│       ├── config_panel.py         # Configuration placeholder
+│       └── resources/              # Empty directory for GUI resources
+│
+├── tests/                 # Unit tests
+│   ├── core/
+│   │   ├── test_process_manager.py
+│   │   └── test_ipc/
+│   │       ├── test_pipes.py
+│   │       ├── test_message_queues.py
+│   │       └── test_shared_memory.py
+│   ├── analysis/
+│   │   ├── test_deadlock_detector.py
+│   │   └── test_performance_metrics.py
+│   └── gui/
+│       └── test_process_view.py
+│
+├── examples/              # Example scripts
+│   ├── simple_pipe_example.py
+│   ├── message_queue_demo.py
+│   └── deadlock_scenario.py
+│
+├── docs/                  # Documentation
+│   ├── user_manual.md
+│   ├── api_reference.md
+│   └── developer_guide.md
+│
+├── scripts/               # Utility scripts
+│   ├── setup.sh          # Install dependencies
+│   └── run_tests.sh      # Run tests
+│
+├── README.md             # This file
+├── requirements.txt      # Python dependencies
+├── setup.py              # Setup script
+└── main.py               # Entry point
